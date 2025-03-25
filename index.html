@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Avinash S - Portfolio</title>
-    <script type="module" crossorigin src="/Portfolio/assets/index-DJrLslWG.js"></script>
-    <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-CcrJaJk7.css">
-  </head>
-  <body>
-    <div id="root"></div>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+            if (isMobile) {
+                window.location.href = "https://avinash-s-portfolio.netlify.app/"; // Mobile Redirect
+            } else {
+                window.location.href = "https://portfolio-s-avinash.netlify.app/"; // Desktop Redirect
+            }
+        });
+    </script>
+</head>
+<body>
+    <p>If not redirected, <a href="https://portfolio-s-avinash.netlify.app/">click here</a>.</p>
+</body>
 </html>
