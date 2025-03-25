@@ -4,16 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script>
-        // Redirect immediately
         (function() {
             const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
-            window.location.replace(isMobile ? 
-                "https://avinash-s-portfolio.netlify.app/" : 
-                "https://portfolio-s-avinash.netlify.app/"
-            );
+            
+            if (isMobile) {
+                document.addEventListener("DOMContentLoaded", () => {
+                    const message = document.createElement("div");
+                    message.textContent = "Use a desktop for a better experience.";
+                    
+                    Object.assign(message.style, {
+                        position: "fixed",
+                        top: "50%",
+                        left: "50%",
+                        transform: "translate(-50%, -50%)",
+                        backgroundColor: "rgba(0, 0, 0, 0.8)", // Slight transparency
+                        color: "white",
+                        padding: "15px 25px",
+                        borderRadius: "8px",
+                        fontSize: "18px",
+                        textAlign: "center",
+                        fontFamily: "Arial, sans-serif",
+                        width: "80%",
+                        maxWidth: "300px",
+                        boxShadow: "0 4px 10px rgba(0, 0, 0, 0.2)",
+                    });
+
+                    document.body.appendChild(message);
+
+                    setTimeout(() => {
+                        window.location.replace("https://avinash-s-portfolio.netlify.app/");
+                    }, 1000);
+                });
+            } else {
+                window.location.replace("https://portfolio-s-avinash.netlify.app/");
+            }
         })();
     </script>
 </head>
-<body style="display: none;">
+<body>
 </body>
 </html>
