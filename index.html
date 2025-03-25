@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting...</title>
     <script>
-        // Redirect as soon as the script loads
+        // Redirect immediately
         (function() {
             const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
             window.location.replace(isMobile ? 
@@ -15,6 +14,6 @@
         })();
     </script>
 </head>
-<body>
+<body style="display: none;">
 </body>
 </html>
